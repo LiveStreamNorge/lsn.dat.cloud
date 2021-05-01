@@ -1,6 +1,6 @@
 <template>
   <v-container tag="div">
-    <span :style="lsn">LiveStreamNorge</span>
+    <NuxtLink to="/" style="text-decoration: none; color: inherit;"><span :style="lsn">LiveStreamNorge</span></NuxtLink>
   </v-container>
 </template>
 
