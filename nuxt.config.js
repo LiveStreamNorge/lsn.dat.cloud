@@ -74,7 +74,7 @@ export default {
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     { src:'~/plugins/timeago.js' },
-    { src:'~/plugins/plausible.js' }
+    //{ src:'~/plugins/plausible.js' }
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -182,6 +182,7 @@ export default {
     '@nuxtjs/axios',
     ["nuxt-rfg-icon", {masterPicture: "static/icon.png"}],
     '@nuxtjs/pwa',
+    'vue-plausible',
     ['nuxt-i18n', {
       detectBrowserLanguage: {
         useCookie: true,
