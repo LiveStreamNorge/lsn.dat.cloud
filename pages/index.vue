@@ -28,7 +28,7 @@
 
     <v-card tag="div" class="pa-2 lastUpdated" @click="update" outlined>
       <v-skeleton-loader :loading="$fetchState.pending" type="text" width="200px">
-        {{ $t("lastUpdated") }}: <timeago :datetime="lastUpdated" :locale="this.$root.$i18n.locale"></timeago>
+        {{ $t("lastUpdated") }}: <timeago :datetime="lastUpdated" :autoUpdate="10" :locale="this.$root.$i18n.locale"></timeago>
       </v-skeleton-loader>
     </v-card>
 
