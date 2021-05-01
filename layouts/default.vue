@@ -1,5 +1,7 @@
 <template>
   <v-app>
+    <link href='https://fonts.googleapis.com/css2?family=Raleway&family=Montserrat&family=Bebas Neue&display=swap'
+          rel='stylesheet' type='text/css'>
     <v-app-bar
       fixed
       app
@@ -59,6 +61,12 @@ export default {
 </script>
 
 <style lang="scss">
+ .v-application {
+   font-family: "Raleway", sans-serif !important;
+    .title { // To pin point specific classes of some components
+      font-family: "Raleway", sans-serif !important;
+    }
+ }
 .v-app-bar--is-scrolled .arrow {
   top: 40px;
 }
