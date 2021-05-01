@@ -1,9 +1,6 @@
 <template>
   <v-container tag="div">
-    <span class="mr-n1" :style="bracket">[</span>
-    <span :style="jdanks">JDANKS</span>
-    <sup class="mb-2" :style="army">army</sup>
-    <span class="ml-n1" :style="bracket">]</span>
+    <span :style="lsn">LiveStreamNorge</span>
   </v-container>
 </template>
 
@@ -18,21 +15,15 @@ export default {
     },
   },
   computed: {
-    jdanks() {
+    lsn() {
       return `
-          font-family: 'Permanent Marker', cursive;
-          font-size: calc(15pt * ${this.scale});
-        `;
-    },
-    army() {
-      return `
-          font-family: 'Playfair Display', serif;
-          font-size: calc(8pt * ${this.scale});
-        `;
-    },
-    bracket() {
-      return `
-          font-size: calc(15pt * ${this.scale});
+          color: #ff2fea;
+          font-family: 'Bebas Neue', cursive;
+          font-size: calc(24pt * ${this.scale});
+          font-weight: 700;
+          letter-spacing: 0.1em;
+          line-height: 1.2;
+          text-transform: uppercase;
         `;
     },
   }

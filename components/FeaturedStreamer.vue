@@ -2,10 +2,10 @@
 
   <v-container fluid style="padding: 0">
 
-    <stream-list-header class="rainbow mt-auto" divider-title="featured stream"/>
+    <stream-list-header class="mt-auto" divider-title="featured stream"/>
 
     <streamer-entry :data="streamer" :live="streamer.live" :unread="true" class="my-5 featured">
-      <div v-for="i in 3" class="ring-animation" :style="`animation-delay: ${0.15 * i}s;`"/>
+      <div v-for="i in 3" v-bind:key="i" class="ring-animation" :style="`animation-delay: ${0.15 * i}s;`"/>
     </streamer-entry>
 
   </v-container>
@@ -23,28 +23,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .rainbow {
-    background-image: repeating-linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red, violet);
-    background-size: 800% 800%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: rainbow 6s ease-in-out 0s infinite alternate;
-  }
-
-  @keyframes rainbow {
-    0% {
-      background-position: 15% 50%;
-    }
-    50% {
-      background-position: 100% 25%;
-    }
-    100% {
-      background-position: 15% 50%;
-    }
-  }
 
   .ring-animation {
-    border: solid #26a69a 1px;
+    border: solid #ff2fea 1px;
     border-radius: 3px;
 
     z-index: 10;

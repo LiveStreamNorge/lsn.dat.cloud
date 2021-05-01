@@ -1,9 +1,6 @@
 export default function(ctx) {
     const links = new Map([
-      ['/discord', 'https://discord.gg/QjfTqzJsHJ'],
-      ['/discord/voice', 'https://discord.gg/kzyKZFAeXG'],
-      ['/discord/temporary', 'https://discord.gg/V4WcRwQEKR'],
-      ['/discord/voice/temporary', 'https://discord.gg/b2A6KJnW8Y'],
+      ['/discord', 'https://discord.gg/6TCAZUD'],
     ]);
 
     let fullPath = ctx.route.fullPath;

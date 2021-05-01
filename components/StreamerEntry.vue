@@ -99,6 +99,7 @@ export default {
           ['bitwave', '/bitwave.svg'],
           ['robotstreamer', '/robotstreamer.png'],
           ['trovo', '/trovo.png'],
+          ['guac', '/guac.png'],
       ])
       return '/platforms' + map.get(this.data.platform);
     },
@@ -110,6 +111,7 @@ export default {
         ['bitwave', 'bitwave.tv/'],
         ['robotstreamer', 'robotstreamer.com/robot/'],
         ['trovo', 'trovo.live/'],
+        ['guac', 'guac.live/'],
       ]);
       return 'https://' + map.get(this.data.platform) + this.data.userId;
     }

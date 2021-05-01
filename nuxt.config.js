@@ -8,11 +8,11 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'Multi-Platform Streamer List - [JDANKS army]',
+    title: '[LiveStreamNorge] Streamere i Norge',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Keep up to date with your favorite streamers. A list of streams across many platforms, with live status, stream title, viewer count, and more!' }
+      { hid: 'description', name: 'description', content: 'Hold deg oppdatert med dine favoritt norske streamere. En liste over strømmer på mange plattformer, med live status, streamtittel, antall seere og mer!' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -43,16 +43,16 @@ export default {
 
   pwa: {
     meta: {
-      name: '[JDANKS army]',
-      author: 'dvdrw, et al',
-      description: 'Keep up to date with your favorite streamers. A list of streams across many platforms, with live status, stream title, viewer count, and more!',
-      ogHost: 'jdanks.army',
+      name: '[LiveStreamNorge]',
+      author: 'datagutt',
+      description: 'Hold deg oppdatert med dine favoritt norske streamere. En liste over strømmer på mange plattformer, med live status, streamtittel, antall seere og mer!',
+      ogHost: 'lsn.dat.cloud',
       ogImage: true
     },
     manifest: {
-      name: '[JDANKS army]',
-      short_name: '[JDANKS army]',
-      description: 'Keep up to date with your favorite streamers. A list of streams across many platforms, with live status, stream title, viewer count, and more!',
+      name: '[LiveStreamNorge]',
+      short_name: '[LSN]',
+      description: 'Hold deg oppdatert med dine favoritt norske streamere. En liste over strømmer på mange plattformer, med live status, streamtittel, antall seere og mer!',
       orientation: 'portrait',
       categories: [ 'entertainment', 'social' ],
       display: 'standalone',
@@ -97,6 +97,7 @@ export default {
           '/platforms/trovo.png',
           '/platforms/twitch.png',
           '/platforms/youtube.png',
+          '/platforms/guac.png',
       ]
     }
   },
@@ -119,7 +120,7 @@ export default {
       dark: true,
       themes: {
         dark: {
-          primary: colors.teal.darken2,
+          primary: "#eb19ff",
           accent: colors.grey.darken1,
           cardback: colors.grey.darken4,
           'image-back': '#151515',

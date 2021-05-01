@@ -1,8 +1,8 @@
 <template>
   <v-container fluid tag="div">
-    <link href='https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Playfair+Display&display=swap'
+    <link href='https://fonts.googleapis.com/css2?family=Raleway&family=Montserrat&family=Bebas Neue&display=swap'
           rel='stylesheet' type='text/css'>
-    <link rel="prefetch" href="https://api.jdanks.army/streams">
+    <link rel="prefetch" href="https://lsn-api.dat.cloud/streams">
 
     <v-row justify="center">
       <v-col class="mt-n5 content" tag="v-card">
@@ -161,7 +161,7 @@ export default {
 
     async update() {
       try {
-        this.streamer_data = await this.$axios.$get('https://api.jdanks.army/streams');
+        this.streamer_data = await this.$axios.$get('https://lsn-api.dat.cloud/streams');
         this.filterStreamers();
 
         this.lastUpdated = new Date();
@@ -180,6 +180,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.v-application {
+   font-family: "Raleway", sans-serif !important;
+ }
+
 .content {
   max-width: 600px;
 }
