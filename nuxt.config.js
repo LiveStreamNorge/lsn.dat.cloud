@@ -46,6 +46,10 @@ export default {
         content: '630'
       },
       {
+        property: 'twitter:image',
+        content: 'https://livestreamnorge.no/wp-content/uploads/2020/02/LivestreamNorge_Facebook.jpg'
+      },
+      {
         property: 'twitter:card',
         content: 'summary_large_image'
       },
