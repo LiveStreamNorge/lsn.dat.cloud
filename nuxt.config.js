@@ -12,7 +12,47 @@ export default {
     meta: [
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-      {hid: 'description', name: 'description', content: 'Hold deg oppdatert med dine favoritt norske streamere. En liste over strømmer på mange plattformer, med live status, streamtittel, antall seere og mer!'}
+      {hid: 'description', name: 'description', content: 'Hold deg oppdatert med dine favoritt norske streamere. En liste over strømmer på mange plattformer, med live status, streamtittel, antall seere og mer!'},
+      {
+        property: 'og:type',
+        content: 'en_US'
+      },
+      {
+        property: 'og:title',
+        content: '[LiveStreamNorge] Streamere i Norge'
+      },
+      {
+        property: 'og:description',
+        content: 'Hold deg oppdatert med dine favoritt norske streamere. En liste over strømmer på mange plattformer, med live status, streamtittel, antall seere og mer'
+      },
+      {
+        property: 'og:site_name',
+        content: 'LiveStreamNorge'
+      },
+      {
+        property: 'article:publisher',
+        content: 'https://www.facebook.com/livestreamnorge'
+      },
+      {
+        property: 'og:image',
+        content: 'https://livestreamnorge.no/wp-content/uploads/2020/02/LivestreamNorge_Facebook.jpg'
+      },
+      {
+        property: 'og:image:width',
+        content: '1200'
+      },
+      {
+        property: 'og:image:height',
+        content: '630'
+      },
+      {
+        property: 'twitter:card',
+        content: 'summary_large_image'
+      },
+      {
+        property: 'twitter:site',
+        content: '@LivestreamNorge'
+      },
     ],
     link: [
       {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
