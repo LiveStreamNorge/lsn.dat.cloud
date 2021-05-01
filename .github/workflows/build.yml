@@ -23,7 +23,7 @@ jobs:
         if: success()
         uses: crazy-max/ghaction-github-pages@v2
         with:
-          fqdn: jdanks.army
+          fqdn: lsn.dat.cloud
           build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
