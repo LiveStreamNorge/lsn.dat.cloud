@@ -2,7 +2,7 @@
 
   <v-container fluid style="padding: 0">
 
-    <stream-list-header class="mt-auto" :divider-title="$t('featured')"/>
+    <stream-list-header class="gold mt-auto" :divider-title="$t('featured')"/>
 
     <streamer-entry :data="streamer" :live="streamer.live" :unread="true" class="my-5 featured">
       <div v-for="i in 3" v-bind:key="i" class="ring-animation" :style="`animation-delay: ${0.15 * i}s;`"/>
@@ -24,6 +24,19 @@ export default {
 
 <style scoped lang="scss">
 
+.gold {
+  background: linear-gradient(90deg, rgba(186,148,62,1) 0%, rgba(236,172,32,1) 20%, rgba(186,148,62,1) 39%, rgba(249,244,180,1) 50%, rgba(186,148,62,1) 60%, rgba(236,172,32,1) 80%, rgba(186,148,62,1) 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;	
+  animation: shine 6s ease-in-out 0s infinite alternate;
+  background-size: 200%;
+  background-position: left;
+
+}
+@keyframes shine {
+  to{background-position: right}
+ 
+}
   .ring-animation {
     border: solid #ff2fea 1px;
     border-radius: 3px;
