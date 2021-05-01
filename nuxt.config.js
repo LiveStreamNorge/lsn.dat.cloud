@@ -29,6 +29,7 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
+    { src:'~/plugins/timeago.js' }
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -160,7 +161,7 @@ export default {
           cardback: colors.grey.darken4,
           'image-back': '#151515',
           'grey-darken2': colors.grey.darken2,
-          secondary: colors.red.darken3,
+          secondary: "#ff2fea",
           info: colors.blue.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
@@ -172,7 +173,7 @@ export default {
           cardback: colors.grey.lighten5,
           'image-back': '#151515',
           'grey-darken2': colors.grey.darken2,
-          secondary: colors.red.darken3,
+          secondary: "#ff2fea",
           info: colors.blue.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
