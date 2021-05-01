@@ -13,8 +13,8 @@
       </v-toolbar-title>
       <v-spacer />
       <v-icon
-           style="height: 170%; width: auto; position: fixed; right: 10px"
-           class="py-1"
+           style="height: 100%; width: auto; position: fixed; right: 10px"
+           class="py-1 arrow"
            @click="scroll()">mdi-arrow-up</v-icon>
     </v-app-bar>
     <v-main>
@@ -31,7 +31,7 @@
         <v-icon small left>mdi-scale-balance</v-icon> AGPLv3.0
       </v-chip>
       <v-chip pill outlined small color="green" class="ml-2" href="https://github.com/LiveStreamNorge/lsn.dat.cloud">
-        <v-icon small left>mdi-open-in-new</v-icon> source code
+        <v-icon small left>mdi-open-in-new</v-icon> {{$t("sourceCode")}}
       </v-chip>
     </v-footer>
   </v-app>
@@ -59,4 +59,7 @@ export default {
 </script>
 
 <style lang="scss">
+.v-app-bar--is-scrolled .arrow {
+  top: 40px;
+}
 </style>

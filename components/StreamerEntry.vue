@@ -37,8 +37,8 @@
             <span :class="!live && 'grey--text'" class="hide-overflow">{{data.name}}</span>
 
             <div class="d-none d-sm-inline-block">
-              <v-chip v-if="live" x-small pill color="red" class="white--text"> LIVE </v-chip>
-              <v-chip v-else      x-small pill color="grey" outlined> OFFLINE </v-chip>
+              <v-chip v-if="live" x-small pill color="red" class="white--text"> {{$t("live")}} </v-chip>
+              <v-chip v-else      x-small pill color="grey" outlined> {{$t("offline")}} </v-chip>
             </div>
 
             <v-icon v-if="unread" color="warning" class="ml-n1">mdi-circle-medium</v-icon>

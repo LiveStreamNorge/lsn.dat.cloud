@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="d-flex align-center">
-      <h4 class="grey--text overline">Choice quote:</h4>
+      <h4 class="grey--text overline">{{$t("choiceQuote")}}</h4>
       <v-divider class="flex-grow-1 ml-2"/>
     </div>
     <div class="d-flex text-center font-italic">

@@ -2,7 +2,7 @@
 
   <v-container fluid style="padding: 0">
 
-    <stream-list-header class="mt-auto" divider-title="featured stream"/>
+    <stream-list-header class="mt-auto" :divider-title="$t('featured')"/>
 
     <streamer-entry :data="streamer" :live="streamer.live" :unread="true" class="my-5 featured">
       <div v-for="i in 3" v-bind:key="i" class="ring-animation" :style="`animation-delay: ${0.15 * i}s;`"/>

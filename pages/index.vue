@@ -11,13 +11,13 @@
             <featured-streamer v-if="featuredStreamer" :streamer="featuredStreamer" key="2"/>
           </v-expand-transition>
 
-          <stream-list-header header-styling="grey--text" divider-title="Online streams" class="mt-n1 mb-n1"/>
+          <stream-list-header header-styling="grey--text" :divider-title="$t('onlineStreams')" class="mt-n1 mb-n1"/>
           <transition name="scroll-x-transition" mode="out-in">
             <stream-list-group-skeleton v-if="$fetchState.pending" key="0"/>
             <stream-list-group :streamers="online" v-else key="1"/>
           </transition>
 
-          <stream-list-header header-styling="accent--text" divider-title="Offline streams" class="mt-5 mb-n1"/>
+          <stream-list-header header-styling="accent--text" :divider-title="$t('offlineStreams')" class="mt-5 mb-n1"/>
           <transition name="scroll-x-transition" mode="out-in">
             <stream-list-group-skeleton v-if="$fetchState.pending" key="0"/>
             <stream-list-group :streamers="offline" v-else key="1"/>
@@ -30,7 +30,7 @@
 
     <v-card tag="div" class="pa-2 lastUpdated" @click="update" outlined>
       <v-skeleton-loader :loading="$fetchState.pending" type="text" width="200px">
-        Last updated {{ lastUpdatedString }}
+        {{ $t("lastUpdated") }} {{ lastUpdatedString }}
       </v-skeleton-loader>
     </v-card>
 
@@ -80,35 +80,8 @@ export default {
 
   methods: {
     getFormattedDate(date, prefomattedDate = false, hideYear = false) {
-      const MONTH_NAMES = [
-        'January', 'February', 'March', 'April', 'May', 'June',
-        'July', 'August', 'September', 'October', 'November', 'December'
-      ];
-
-      const day = date.getDate();
-      const month = MONTH_NAMES[date.getMonth()];
-      const year = date.getFullYear();
-      const hours = date.getHours();
-      let minutes = date.getMinutes();
-
-      if (minutes < 10) {
-        // Adding leading zero to minutes
-        minutes = `0${minutes}`;
-      }
-
-      if (prefomattedDate) {
-        // Today at 10:20
-        // Yesterday at 10:20
-        return `${prefomattedDate} at ${hours}:${minutes}`;
-      }
-
-      if (hideYear) {
-        // 10. January at 10:20
-        return `${day}. ${month} at ${hours}:${minutes}`;
-      }
-
       // 10. January 2017. at 10:20
-      return `${day}. ${month} ${year}. at ${hours}:${minutes}`;
+      return $d(date, 'long');
     },
 
     timeAgo(dateParam) {

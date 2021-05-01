@@ -10,12 +10,12 @@ export default {
   head: {
     title: '[LiveStreamNorge] Streamere i Norge',
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Hold deg oppdatert med dine favoritt norske streamere. En liste over strømmer på mange plattformer, med live status, streamtittel, antall seere og mer!' }
+      {charset: 'utf-8'},
+      {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+      {hid: 'description', name: 'description', content: 'Hold deg oppdatert med dine favoritt norske streamere. En liste over strømmer på mange plattformer, med live status, streamtittel, antall seere og mer!'}
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
     ]
   },
 
@@ -54,7 +54,7 @@ export default {
       short_name: '[LSN]',
       description: 'Hold deg oppdatert med dine favoritt norske streamere. En liste over strømmer på mange plattformer, med live status, streamtittel, antall seere og mer!',
       orientation: 'portrait',
-      categories: [ 'entertainment', 'social' ],
+      categories: ['entertainment', 'social'],
       display: 'standalone',
       theme_color: '#1e1e1e',
       background_color: '#1e1e1e',
@@ -90,24 +90,59 @@ export default {
         },
       ],
       offlineAssets: [
-          '/defaultAvatar.webp',
-          '/platforms/bitwave.svg',
-          '/platforms/dlive.png',
-          '/platforms/robotstreamer.png',
-          '/platforms/trovo.png',
-          '/platforms/twitch.png',
-          '/platforms/youtube.png',
-          '/platforms/guac.png',
+        '/defaultAvatar.webp',
+        '/platforms/bitwave.svg',
+        '/platforms/dlive.png',
+        '/platforms/robotstreamer.png',
+        '/platforms/trovo.png',
+        '/platforms/twitch.png',
+        '/platforms/youtube.png',
+        '/platforms/guac.png',
       ]
     }
   },
-
+  i18n: {
+    locales: ['en', 'nb'],
+    defaultLocale: 'nb',
+    vueI18n: {
+      fallbackLocale: 'en',
+      messages: {
+        en: {
+          choiceQuote: 'Choice quote:',
+          live: 'LIVE',
+          offline: 'OFFLINE',
+          sourceCode: "Source code",
+          lastUpdated: "Last updated",
+          featured: 'Featured stream',
+          onlineStreams: 'Online streams',
+          offlineStreams: 'Offline streams'
+        },
+        nb: {
+          choiceQuote: 'Utvalgt sitat:',
+          live: 'DIREKTE',
+          offline: 'OFFLINE',
+          sourceCode: "Kildekode",
+          lastUpdated: "Sist oppdatert",
+          featured: 'Utvalgt stream',
+          onlineStreams: 'Direktesendinger',
+          offlineStreams: 'Offline sendinger'
+        },
+      }
+    },
+  },
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    ["nuxt-rfg-icon", { masterPicture: "static/icon.png" }],
+    ["nuxt-rfg-icon", {masterPicture: "static/icon.png"}],
     '@nuxtjs/pwa',
+    ['nuxt-i18n', {
+      detectBrowserLanguage: {
+        useCookie: true,
+        cookieKey: 'i18n_redirected',
+        onlyOnRoot: true,  // recommended
+      }
+    }],
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
