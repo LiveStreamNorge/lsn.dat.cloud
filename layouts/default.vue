@@ -63,9 +63,25 @@ export default {
 <style lang="scss">
  .v-application {
    font-family: "Raleway", sans-serif !important;
-    .title { // To pin point specific classes of some components
-      font-family: "Raleway", sans-serif !important;
-    }
+      .title,
+      .text-h1,
+      .text-h2,
+      .text-h3,
+      .text-h4,
+      .text-h5,
+      .text-h6,
+      .text-headline,
+      .text-title,
+      .text-subtitle-1,
+      .text-subtitle-2,
+      .text-body-1,
+      .text-body-2,
+      .text-button,
+      .text-caption,
+      .text-overline {
+        font-family: "Raleway", sans-serif !important;
+      }
+
  }
 .v-app-bar--is-scrolled .arrow {
   top: 40px;
