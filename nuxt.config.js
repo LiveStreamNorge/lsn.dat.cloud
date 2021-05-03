@@ -1,5 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
-import { AVAILABLE_TEAMS } from './src/utils/constants';
+import { AVAILABLE_TEAMS } from './utils/constants';
 
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
@@ -201,10 +201,12 @@ export default {
   axios: {},
 
   generate: {
+    crawler: true,
     routes(callback){
-      const routes = AVAILABLE_TEAMS.map(team => {
+      var routes = AVAILABLE_TEAMS.map(team => {
         return '/team/' + team.value
       });
+      routes.push('/discord');
       callback(null, routes);
     }
   },
