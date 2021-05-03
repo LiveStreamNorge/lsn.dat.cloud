@@ -8,7 +8,18 @@
 
     <span class="subheading">Stream-team:</span>
     <v-chip-group v-model="teams" multiple column @change="emitFilterChanged">
-      <v-chip filter outlined value="gutta">Gutta</v-chip>
+      <v-chip filter outlined :key="team.value" :value="team.value" v-for="team in availableTeams">
+        <v-img
+          width="32px"
+          contain
+          eager
+          v-if="team.image"
+          :alt="team.name"
+          :title="team.name"
+          :src="team.image"
+        />
+        <span v-if="!team.image">{{ team.name }}</span>
+      </v-chip>
     </v-chip-group>
     <span class="subheading">Platform:</span>
     <v-chip-group
@@ -18,20 +29,21 @@
       @change="emitFilterChanged"
     >
       <div :key="platform.value" v-for="platform in availablePlatforms">
-        <v-tooltip bottom lazy>
+        <v-tooltip bottom>
           <template v-slot:activator="{ on, attrs }">
-            <v-chip 
-				filter 
-				outlined 
-				:value="platform.value"
-                v-bind="attrs"
-                v-on="on">
+            <v-chip
+              filter
+              outlined
+              :value="platform.value"
+              v-bind="attrs"
+              v-on="on"
+            >
               <v-img
                 width="18px"
                 contain
                 eager
-                :alt="platform.title"
-                :title="platform.title"
+                :alt="platform.name"
+                :title="platform.name"
                 :src="platform.image"
               />
             </v-chip>
@@ -58,6 +70,43 @@ export default {
     return initialState();
   },
   computed: {
+    availableTeams() {
+      return [
+        {
+          name: "Gutta",
+          value: "gutta",
+          image: "/teams/gutta.png",
+        },
+        {
+          name: "MSI Gaming",
+          value: "MSI Gaming",
+        },
+        {
+          name: "Sensation",
+          value: "sensation",
+        },
+        {
+          name: "LiveStreamNorge",
+          value: "livestreamnorge",
+        },
+        {
+          name: "KAOS",
+          value: "kaos",
+        },
+        {
+          name: "Pepegas",
+          value: "pepegas",
+        },
+      ].sort((a, b) => {
+        if (a.name < b.name) {
+          return -1;
+        }
+        if (a.name > b.name) {
+          return 1;
+        }
+        return 0;
+      });
+    },
     availablePlatforms() {
       return [
         {
