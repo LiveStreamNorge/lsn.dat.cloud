@@ -69,6 +69,7 @@ export default {
   ],
 
   router: {
+    base: '/',
     middleware: ['discordRedirects'],
   },
 
