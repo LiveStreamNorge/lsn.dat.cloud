@@ -104,8 +104,12 @@ export default {
           (x.live ? this.online : this.offline).push(x)
       );
 
-      this.featuredStreamer = this.online.filter(x => !!x.featuredRank)
-          .sort((l, r) => l.featuredRank - r.featuredRank)[0];
+      let featuredStreamer = this.online
+        .filter((x) => !!x.featuredRank)
+        .sort((l, r) => l.featuredRank - r.featuredRank);
+      // Get random streamer from top 3 featured
+      this.featuredStreamer =
+        featuredStreamer[Math.floor(Math.random() * (featuredStreamer.length < 3 ? featuredStreamer.length : 3))];
       this.online.sort((l, r) => r.viewers - l.viewers);
     },
 
