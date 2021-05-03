@@ -1,5 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
-import { AVAILABLE_TEAMS } from './src/util/constants';
+import { AVAILABLE_TEAMS } from './src/utils/constants';
 
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
