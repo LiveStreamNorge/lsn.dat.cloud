@@ -5,7 +5,7 @@ export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
 
-  ssr: true,
+  ssr: false,
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -151,6 +151,7 @@ export default {
   },
   i18n: {
     locales: ['en', 'nb'],
+    strategy: 'prefix',
     defaultLocale: 'nb',
     vueI18n: {
       fallbackLocale: 'en',
@@ -203,6 +204,7 @@ export default {
 
   generate: {
     crawler: true,
+    fallback: true,
     routes(callback){
       var routes = AVAILABLE_TEAMS.map(team => {
         return '/team/' + team.value
