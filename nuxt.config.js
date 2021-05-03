@@ -157,6 +157,7 @@ export default {
           choiceQuote: 'Choice quote:',
           live: 'LIVE',
           offline: 'OFFLINE',
+          filter: 'Filter',
           sourceCode: "Source code",
           lastUpdated: "Last updated",
           featured: 'Featured stream',
@@ -167,6 +168,7 @@ export default {
           choiceQuote: 'Utvalgt sitat:',
           live: 'DIREKTE',
           offline: 'OFFLINE',
+          filter: 'Sorter',
           sourceCode: "Kildekode",
           lastUpdated: "Sist oppdatert",
           featured: 'Utvalgt stream',
@@ -231,5 +233,10 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+    babel:{
+      plugins: [
+        ['@babel/plugin-proposal-private-methods', { loose: true }]
+      ]
+    }
   }
 }

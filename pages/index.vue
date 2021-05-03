@@ -1,37 +1,59 @@
 <template>
   <v-container fluid tag="div">
-    <link rel="prefetch" href="https://lsn-api.dat.cloud/streams">
+    <link rel="prefetch" href="https://lsn-api.dat.cloud/streams" />
 
     <v-row justify="center">
       <v-col class="mt-n5 content" tag="v-card">
+        <stream-filter class="mt-n1 mb-n1" @filter-changed="filterChanged" />
         <v-container tag="div" class="mt-3">
           <v-expand-transition>
-            <featured-streamer v-if="featuredStreamer" :streamer="featuredStreamer" key="2"/>
+            <featured-streamer
+              v-if="featuredStreamer"
+              :streamer="featuredStreamer"
+              key="2"
+            />
           </v-expand-transition>
 
-          <stream-list-header header-styling="grey--text" :divider-title="$t('onlineStreams')" class="mt-n1 mb-n1"/>
+
+          <stream-list-header
+            header-styling="grey--text"
+            :divider-title="$t('onlineStreams')"
+            class="mt-n1 mb-n1"
+          />
           <transition name="scroll-x-transition" mode="out-in">
-            <stream-list-group-skeleton v-if="$fetchState.pending" key="0"/>
-            <stream-list-group :streamers="online" v-else key="1"/>
+            <stream-list-group-skeleton v-if="$fetchState.pending" key="0" />
+            <stream-list-group :streamers="online" v-else key="1" />
           </transition>
 
-          <stream-list-header header-styling="accent--text" :divider-title="$t('offlineStreams')" class="mt-5 mb-n1"/>
+          <stream-list-header
+            header-styling="accent--text"
+            :divider-title="$t('offlineStreams')"
+            class="mt-5 mb-n1"
+          />
           <transition name="scroll-x-transition" mode="out-in">
-            <stream-list-group-skeleton v-if="$fetchState.pending" key="0"/>
-            <stream-list-group :streamers="offline" v-else key="1"/>
+            <stream-list-group-skeleton v-if="$fetchState.pending" key="0" />
+            <stream-list-group :streamers="offline" v-else key="1" />
           </transition>
 
-          <random-quote class="ma-0 pa-0 mt-4"/>
+          <random-quote class="ma-0 pa-0 mt-4" />
         </v-container>
       </v-col>
     </v-row>
 
     <v-card tag="div" class="pa-2 lastUpdated" @click="update" outlined>
-      <v-skeleton-loader :loading="$fetchState.pending" type="text" width="200px">
-        {{ $t("lastUpdated") }}: <timeago :datetime="lastUpdated" :auto-update="10" :locale="this.$root.$i18n.locale"></timeago>
+      <v-skeleton-loader
+        :loading="$fetchState.pending"
+        type="text"
+        width="200px"
+      >
+        {{ $t("lastUpdated") }}:
+        <timeago
+          :datetime="lastUpdated"
+          :auto-update="10"
+          :locale="this.$root.$i18n.locale"
+        ></timeago>
       </v-skeleton-loader>
     </v-card>
-
   </v-container>
 </template>
 
@@ -87,9 +109,19 @@ export default {
       this.online.sort((l, r) => r.viewers - l.viewers);
     },
 
-    async update() {
+    async update(activeServerFilters) {
+      var params = "?";
+      if(activeServerFilters && typeof activeServerFilters === "object"){
+        for(var filter in activeServerFilters){
+          if(activeServerFilters.hasOwnProperty(filter)){
+            if(activeServerFilters[filter]){
+              params += `&filter[${filter}]=${activeServerFilters[filter]}`;
+            }
+          }
+        }
+      }
       try {
-        this.streamer_data = await this.$axios.$get('https://lsn-api.dat.cloud/streams');
+        this.streamer_data = await this.$axios.$get('https://lsn-api.dat.cloud/streams/' + params);
         this.filterStreamers();
 
         this.lastUpdated = new Date();
@@ -97,6 +129,9 @@ export default {
       } catch (e) {
         console.error(e);
       }
+    },
+    filterChanged: async function filterChanged(activeFilters) {
+      await this.update(Object.assign([], activeFilters));
     }
   },
 

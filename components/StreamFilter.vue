@@ -1,0 +1,130 @@
+<template>
+  <v-container fluid style="padding: 0">
+    <stream-list-header
+      header-styling="grey--text"
+      class="mt-auto"
+      :divider-title="$t('filter')"
+    />
+
+    <span class="subheading">Stream-team:</span>
+    <v-chip-group v-model="teams" multiple column @change="emitFilterChanged">
+      <v-chip filter outlined value="gutta">Gutta</v-chip>
+    </v-chip-group>
+    <span class="subheading">Platform:</span>
+    <v-chip-group
+      v-model="platforms"
+      multiple
+      column
+      @change="emitFilterChanged"
+    >
+      <div :key="platform.value" v-for="platform in availablePlatforms">
+        <v-tooltip bottom lazy>
+          <template v-slot:activator="{ on, attrs }">
+            <v-chip 
+				filter 
+				outlined 
+				:value="platform.value"
+                v-bind="attrs"
+                v-on="on">
+              <v-img
+                width="18px"
+                contain
+                eager
+                :alt="platform.title"
+                :title="platform.title"
+                :src="platform.image"
+              />
+            </v-chip>
+          </template>
+          <span>{{ platform.name }}</span>
+        </v-tooltip>
+      </div>
+    </v-chip-group>
+  </v-container>
+</template>
+
+<script>
+// We put initial state in a function
+// This is so we can reset the data when clicking on "Reset filter"
+function initialState() {
+  return {
+    teams: [],
+    platforms: [],
+    activeFilters: [],
+  };
+}
+export default {
+  data() {
+    return initialState();
+  },
+  computed: {
+    availablePlatforms() {
+      return [
+        {
+          name: "Twitch",
+          value: "twitch",
+          image: "/platforms/twitch.png",
+        },
+        {
+          name: "Dlive",
+          value: "dlive",
+          image: "/platforms/dlive.png",
+        },
+        {
+          name: "Youtube",
+          value: "youtube",
+          image: "/platforms/youtube.png",
+        },
+        {
+          name: "Bitwave",
+          value: "bitwave",
+          image: "/platforms/bitwave.svg",
+        },
+        {
+          name: "Robotstreamer",
+          value: "robotstreamer",
+          image: "/platforms/robotstreamer.png",
+        },
+        {
+          name: "Trovo",
+          value: "trovo",
+          image: "/platforms/trovo.png",
+        },
+        {
+          name: "Guac",
+          value: "guac",
+          image: "/platforms/guac.png",
+        },
+      ];
+    },
+  },
+  name: "StreamFilter",
+  methods: {
+    emitFilterChanged: function emitFilterChanged() {
+      if (this.teams) {
+        this.activeFilters["team"] = this.teams.join(",");
+      } else {
+        delete this.activeFilters["team"];
+      }
+
+      if (this.platforms) {
+        this.activeFilters["platform"] = this.platforms.join(",");
+      } else {
+        delete this.activeFilters["platform"];
+      }
+      console.log(this.teams, this.platforms, this.activeFilters);
+      // Emit a filter so that we can update the results
+      this.$emit("filter-changed", this.activeFilters);
+    },
+    resetFilters: function resetFilters() {
+      // Reset to default initialState
+      Object.assign(this.$data, initialState());
+
+      this.emitFilterChanged();
+    },
+  },
+};
+</script>
+
+<style scoped lang="scss">
+</style>
