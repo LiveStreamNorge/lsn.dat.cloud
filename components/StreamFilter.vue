@@ -65,47 +65,14 @@ function initialState() {
     activeFilters: [],
   };
 }
+import { AVAILABLE_TEAMS } from '../utils/constants';
 export default {
   data() {
     return initialState();
   },
   computed: {
     availableTeams() {
-      return [
-        {
-          name: "Gutta",
-          value: "gutta",
-          image: "/teams/gutta.png",
-        },
-        {
-          name: "MSI Gaming",
-          value: "MSI Gaming",
-        },
-        {
-          name: "Sensation",
-          value: "sensation",
-        },
-        {
-          name: "LiveStreamNorge",
-          value: "livestreamnorge",
-        },
-        {
-          name: "KAOS",
-          value: "kaos",
-        },
-        {
-          name: "Pepegas",
-          value: "pepegas",
-        },
-      ].sort((a, b) => {
-        if (a.name < b.name) {
-          return -1;
-        }
-        if (a.name > b.name) {
-          return 1;
-        }
-        return 0;
-      });
+      return AVAILABLE_TEAMS;
     },
     availablePlatforms() {
       return [
