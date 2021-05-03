@@ -1,4 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
+import { AVAILABLE_TEAMS } from './src/util/constants';
 
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
@@ -198,6 +199,15 @@ export default {
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
+
+  generate: {
+    routes(callback){
+      const routes = AVAILABLE_TEAMS.map(team => {
+        return '/team/' + team.value
+      });
+      callback(null, routes);
+    }
+  },
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {
