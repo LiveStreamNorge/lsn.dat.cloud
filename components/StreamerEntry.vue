@@ -41,6 +41,7 @@
               <v-chip v-else      x-small pill color="grey" outlined> {{$t("offline")}} </v-chip>
             </div>
 
+            <v-icon v-if="data.broadcaster_type === 'partner'" color="#a970ff" class="ml-n1">mdi-check-circle</v-icon>
             <v-icon v-if="unread" color="warning" class="ml-n1">mdi-circle-medium</v-icon>
           </div>
 
