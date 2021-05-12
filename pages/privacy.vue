@@ -20,7 +20,7 @@
       </p>
       <p>
         The terms used in this Privacy Policy have the same meanings as in our
-        Terms and Conditions, which is accessible at athletes.gg unless
+        Terms and Conditions, which is accessible at lsn.dat.cloud unless
         otherwise defined in this Privacy Policy.
       </p>
       <p class="text-h5"><strong>Information Collection and Use</strong></p>
