@@ -36,7 +36,18 @@
 
             <span :class="!live && 'grey--text'" class="hide-overflow">{{data.name}}</span>
 
-            <v-icon v-if="data.broadcaster_type === 'partner'" small color="#a970ff" class="ml-n1">mdi-check-circle</v-icon>
+            <v-tooltip bottom>
+              <template v-slot:activator="{ on, attrs }">
+                <v-icon
+                  v-bind="attrs"
+                  v-on="on"
+                  v-if="data.broadcaster_type === 'partner'" 
+                  small
+                  color="#a970ff"
+                  class="ml-n1">mdi-check-circle</v-icon>
+              </template>
+              <span>{{ data.broadcaster_type === 'partner' ? 'Partner' : '' }}</span>
+            </v-tooltip>
 
             <div class="d-none d-sm-inline-block">
               <v-chip v-if="live" x-small pill color="red" class="white--text"> {{$t("live")}} </v-chip>
