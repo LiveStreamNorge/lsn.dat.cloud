@@ -31,6 +31,10 @@
         in this privacy policy.
       </p>
       <p>
+        The app does use third party services that may collect information used
+        to identify you.
+      </p>
+      <p>
         Information gathered from third parties includes data and statistics
         from Twitch, Dlive, Youtube, Bitwave, Robotstreamer, Trovo and Guac.
         This data is <b>PUBLIC INFORMATION</b>. If you do not want to have this
@@ -38,10 +42,6 @@
         privacy settings on Twitch, Dlive, Youtube, Bitwave, Robotstreamer,
         Trovo and/or Guac. WE WILL NOT REMOVE PUBLIC INFORMATION FROM OUR
         WEBSITE WITHOUT A LEGALLY BINDING ORDER TO DO SO.
-      </p>
-      <p>
-        The app does use third party services that may collect information used
-        to identify you.
       </p>
       <p>
         Link to privacy policy of third party service providers used by the app
