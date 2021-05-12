@@ -35,6 +35,9 @@
       <v-chip pill outlined small color="green" class="ml-2" href="https://github.com/LiveStreamNorge/lsn.dat.cloud">
         <v-icon small left>mdi-open-in-new</v-icon> {{$t("sourceCode")}}
       </v-chip>
+      <v-chip outlined small class="ml-2" href="/privacy">
+        {{$t("privacyPolicy")}}
+      </v-chip>
     </v-footer>
   </v-app>
 </template>
