@@ -19,7 +19,7 @@ export const AVAILABLE_TEAMS = function() {
         },
         {
           name: "KAOS",
-          value: "kaos",
+          value: "KAOS",
         },
         {
           name: "Pepegas",
