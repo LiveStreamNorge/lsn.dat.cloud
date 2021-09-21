@@ -191,11 +191,11 @@ export default {
     ["nuxt-rfg-icon", {masterPicture: "static/icon.png"}],
     '@nuxtjs/pwa',
     'vue-plausible',
-    ['nuxt-i18n', {
+    ['@nuxtjs/i18n', {
       detectBrowserLanguage: {
         useCookie: true,
         cookieKey: 'i18n_redirected',
-        onlyOnRoot: true,  // recommended
+        redirectOn: 'root' 
       }
     }],
   ],
