@@ -111,6 +111,16 @@ export default {
           value: "guac",
           image: "/platforms/guac.png",
         },
+        {
+          name: "Brime",
+          value: "brime",
+          image: "/platforms/brime.svg",
+        },
+        {
+          name: "TikTok",
+          value: "tiktok",
+          image: "/platforms/tiktok.svg",
+        },
       ];
     },
   },
