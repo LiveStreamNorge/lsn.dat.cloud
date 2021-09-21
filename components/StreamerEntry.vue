@@ -113,6 +113,8 @@ export default {
           ['robotstreamer', '/robotstreamer.png'],
           ['trovo', '/trovo.png'],
           ['guac', '/guac.png'],
+          ['brime', '/brime.svg'],
+          ['tiktok', '/tiktok.svg'],
       ])
       return '/platforms' + map.get(this.data.platform);
     },
@@ -125,6 +127,8 @@ export default {
         ['robotstreamer', 'robotstreamer.com/robot/'],
         ['trovo', 'trovo.live/'],
         ['guac', 'guac.live/'],
+        ['brime', 'brime.tv/'],
+        ['tiktok', 'www.tiktok.com/@'],
       ]);
       return 'https://' + map.get(this.data.platform) + this.data.userId;
     }
