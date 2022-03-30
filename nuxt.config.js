@@ -139,7 +139,7 @@ export default {
       ],
       offlineAssets: [
         '/defaultAvatar.webp',
-        '/platforms/bitwave.svg',
+        '/platforms/tiktok.svg',
         '/platforms/dlive.png',
         '/platforms/robotstreamer.png',
         '/platforms/trovo.png',

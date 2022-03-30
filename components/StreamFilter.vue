@@ -91,11 +91,6 @@ export default {
           value: "youtube",
           image: "/platforms/youtube.png",
         },
-        //{
-        //  name: "Bitwave",
-        //  value: "bitwave",
-        //  image: "/platforms/bitwave.svg",
-        //},
         {
           name: "Robotstreamer",
           value: "robotstreamer",

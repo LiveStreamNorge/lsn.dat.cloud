@@ -36,10 +36,10 @@
       </p>
       <p>
         Information gathered from third parties includes data and statistics
-        from Twitch, Dlive, Youtube, Bitwave, Robotstreamer, Trovo and Guac.
+        from Twitch, Dlive, Youtube, TikTok, Brime, Robotstreamer, Trovo and Guac.
         This data is <b>PUBLIC INFORMATION</b>. If you do not want to have this
         information shared on LiveStreamNorge, you will have to adjust your
-        privacy settings on Twitch, Dlive, Youtube, Bitwave, Robotstreamer,
+        privacy settings on Twitch, Dlive, Youtube, TikTok, Brime, Robotstreamer,
         Trovo and/or Guac. WE WILL NOT REMOVE PUBLIC INFORMATION FROM OUR
         WEBSITE WITHOUT A LEGALLY BINDING ORDER TO DO SO.
       </p>
@@ -57,7 +57,7 @@
       <p>
         In order to keep statistical data updated, we utilizes API services of
         third parties including but not limited to Twitch, Dlive, Youtube,
-        Bitwave, Robotstreamer, Trovo and Guac. Unless specific access is asked
+        TikTok, Brime, Robotstreamer, Trovo and Guac. Unless specific access is asked
         for at time of use (i.e. to validate your identity), we are only
         gathering publicly available data from each of the API services, not
         anything private about your account.
