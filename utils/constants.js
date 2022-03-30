@@ -29,6 +29,10 @@ export const AVAILABLE_TEAMS = function() {
           name: "Fnatic Network",
           value: "Fnatic Network",
         },
+        {
+          name: "Twisted8",
+          value: "Twisted8",
+        },
       ].sort((a, b) => {
         if (a.name < b.name) {
           return -1;
