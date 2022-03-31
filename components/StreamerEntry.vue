@@ -114,6 +114,7 @@ export default {
           ['guac', '/guac.png'],
           ['brime', '/brime.svg'],
           ['tiktok', '/tiktok.svg'],
+          ['angelthump', '/angelthump.png'],
       ])
       return '/platforms' + map.get(this.data.platform);
     },
@@ -127,6 +128,7 @@ export default {
         ['guac', 'guac.live/'],
         ['brime', 'brime.tv/'],
         ['tiktok', 'www.tiktok.com/@'],
+        ['angelthump.com', 'angelthump.com/'],
       ]);
       return 'https://' + map.get(this.data.platform) + this.data.userId;
     }

@@ -116,6 +116,11 @@ export default {
           value: "tiktok",
           image: "/platforms/tiktok.svg",
         },
+        {
+          name: "Angelthump",
+          value: "angelthump",
+          image: "/platforms/angelthump.png",
+        },
       ];
     },
   },
