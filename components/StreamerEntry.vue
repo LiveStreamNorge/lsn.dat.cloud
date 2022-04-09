@@ -130,6 +130,9 @@ export default {
         ['tiktok', 'www.tiktok.com/@'],
         ['angelthump.com', 'angelthump.com/'],
       ]);
+      if (this.data.platform === 'tiktok') {
+        return 'https://' + map.get(this.data.platform) + this.data.userId + '/live';
+      }
       return 'https://' + map.get(this.data.platform) + this.data.userId;
     }
   },
