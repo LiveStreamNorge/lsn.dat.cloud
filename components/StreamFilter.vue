@@ -40,7 +40,7 @@
             >
               <v-img
                 width="24px"
-                cover
+                contain
                 eager
                 :alt="platform.name"
                 :title="platform.name"
