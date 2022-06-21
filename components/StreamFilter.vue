@@ -39,8 +39,8 @@
               v-on="on"
             >
               <v-img
-                width="32px"
-                contain
+                width="24px"
+                cover
                 eager
                 :alt="platform.name"
                 :title="platform.name"
