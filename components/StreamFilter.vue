@@ -39,7 +39,7 @@
               v-on="on"
             >
               <v-img
-                width="18px"
+                width="32px"
                 contain
                 eager
                 :alt="platform.name"
