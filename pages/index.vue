@@ -3,7 +3,7 @@
     <link rel="prefetch" href="https://lsn-api.dat.cloud/streams" />
 
     <v-row justify="center">
-      <v-col class="mt-n5 content" tag="v-card">
+      <v-col class="mt-n5 content v-card v-sheet theme--dark" tag="v-card">
         <stream-filter class="mt-n1 mb-n1" @filter-changed="filterChanged" />
         <v-container tag="div" class="mt-3">
           <v-expand-transition>
