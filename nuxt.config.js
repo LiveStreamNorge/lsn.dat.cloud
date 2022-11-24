@@ -146,7 +146,7 @@ export default {
         '/platforms/twitch.png',
         '/platforms/youtube.png',
         '/platforms/guac.png',
-        '/platforms/kick.png',
+        '/platforms/kick.svg',
         '/platforms/angelthump.png',
       ]
     }

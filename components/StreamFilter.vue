@@ -113,8 +113,8 @@ export default {
           image: "/platforms/guac.png",
         },
         {
-          name: "kick",
-          value: "Kick",
+          name: "Kick",
+          value: "kick",
           image: "/platforms/kick.svg",
         },
         {

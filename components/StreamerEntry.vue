@@ -122,7 +122,7 @@ export default {
         ["robotstreamer", "/robotstreamer.png"],
         ["trovo", "/trovo.png"],
         ["guac", "/guac.png"],
-        ["kick", "/kick.png"],
+        ["kick", "/kick.svg"],
         ["brime", "/brime.svg"],
         ["tiktok", "/tiktok.svg"],
         ["angelthump", "/angelthump.png"],
