@@ -1,5 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
-import { AVAILABLE_TEAMS } from './utils/constants';
+import {AVAILABLE_TEAMS} from './utils/constants';
 
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
@@ -75,7 +75,7 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-    { src:'~/plugins/timeago.js' },
+    {src: '~/plugins/timeago.js'},
     //{ src:'~/plugins/plausible.js' }
   ],
 
@@ -146,6 +146,7 @@ export default {
         '/platforms/twitch.png',
         '/platforms/youtube.png',
         '/platforms/guac.png',
+        '/platforms/kick.png',
         '/platforms/angelthump.png',
       ]
     }
@@ -196,7 +197,7 @@ export default {
       detectBrowserLanguage: {
         useCookie: true,
         cookieKey: 'i18n_redirected',
-        redirectOn: 'root' 
+        redirectOn: 'root'
       }
     }],
   ],
@@ -207,7 +208,7 @@ export default {
   generate: {
     crawler: true,
     fallback: true,
-    routes(callback){
+    routes(callback) {
       var routes = AVAILABLE_TEAMS.map(team => {
         return '/team/' + team.value
       });
@@ -252,9 +253,9 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-    babel:{
+    babel: {
       plugins: [
-        ['@babel/plugin-proposal-private-methods', { loose: true }]
+        ['@babel/plugin-proposal-private-methods', {loose: true}]
       ]
     }
   }

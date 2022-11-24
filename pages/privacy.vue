@@ -36,31 +36,29 @@
       </p>
       <p>
         Information gathered from third parties includes data and statistics
-        from Twitch, Dlive, Youtube, TikTok, Brime, Robotstreamer, Trovo and Guac.
-        This data is <b>PUBLIC INFORMATION</b>. If you do not want to have this
-        information shared on LiveStreamNorge, you will have to adjust your
-        privacy settings on Twitch, Dlive, Youtube, TikTok, Brime, Robotstreamer,
-        Trovo and/or Guac. WE WILL NOT REMOVE PUBLIC INFORMATION FROM OUR
-        WEBSITE WITHOUT A LEGALLY BINDING ORDER TO DO SO.
+        from Twitch, Dlive, Youtube, TikTok, Brime, Robotstreamer, Trovo, Kick
+        and Guac. This data is <b>PUBLIC INFORMATION</b>. If you do not want to
+        have this information shared on LiveStreamNorge, you will have to adjust
+        your privacy settings on Twitch, Dlive, Youtube, TikTok, Brime,
+        Robotstreamer, Trovo, Kick and/or Guac. WE WILL NOT REMOVE PUBLIC
+        INFORMATION FROM OUR WEBSITE WITHOUT A LEGALLY BINDING ORDER TO DO SO.
       </p>
       <p>
         Link to privacy policy of third party service providers used by the app
       </p>
       <ul>
         <li>
-          <a href="https://plausible.io/data-policy/"
-            >Plausible Analytics</a
-          >
+          <a href="https://plausible.io/data-policy/">Plausible Analytics</a>
         </li>
       </ul>
       <p class="text-h5"><strong>Data Sources</strong></p>
       <p>
         In order to keep statistical data updated, we utilizes API services of
         third parties including but not limited to Twitch, Dlive, Youtube,
-        TikTok, Brime, Robotstreamer, Trovo and Guac. Unless specific access is asked
-        for at time of use (i.e. to validate your identity), we are only
-        gathering publicly available data from each of the API services, not
-        anything private about your account.
+        TikTok, Brime, Robotstreamer, Trovo, Kick and Guac. Unless specific
+        access is asked for at time of use (i.e. to validate your identity), we
+        are only gathering publicly available data from each of the API
+        services, not anything private about your account.
       </p>
       <p class="text-h5"><strong>Log Data</strong></p>
       <p>
@@ -131,9 +129,7 @@
       <p>
         If you have any questions or suggestions about our Privacy Policy, do
         not hesitate to contact us at
-        <a href="mailto:post@livestreamnorge.no"
-          >post@livestreamnorge.no</a
-        >.
+        <a href="mailto:post@livestreamnorge.no">post@livestreamnorge.no</a>.
       </p>
     </div>
   </v-container>

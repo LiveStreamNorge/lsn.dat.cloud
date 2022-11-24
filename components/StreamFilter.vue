@@ -8,7 +8,13 @@
 
     <span class="subheading">Stream-team:</span>
     <v-chip-group v-model="teams" multiple column @change="emitFilterChanged">
-      <v-chip filter outlined :key="team.value" :value="team.value" v-for="team in availableTeams">
+      <v-chip
+        filter
+        outlined
+        :key="team.value"
+        :value="team.value"
+        v-for="team in availableTeams"
+      >
         <v-img
           width="32px"
           contain
@@ -65,7 +71,7 @@ function initialState() {
     activeFilters: [],
   };
 }
-import { AVAILABLE_TEAMS } from '../utils/constants';
+import { AVAILABLE_TEAMS } from "../utils/constants";
 export default {
   data() {
     return initialState();
@@ -105,6 +111,11 @@ export default {
           name: "Guac",
           value: "guac",
           image: "/platforms/guac.png",
+        },
+        {
+          name: "kick",
+          value: "Kick",
+          image: "/platforms/kick.svg",
         },
         {
           name: "Brime",
@@ -152,5 +163,4 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>
