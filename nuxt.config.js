@@ -1,10 +1,12 @@
 import colors from 'vuetify/es5/util/colors'
 import {AVAILABLE_TEAMS} from './utils/constants';
+import { defineNuxtConfig } from '@nuxt/bridge'
 
-export default {
+export default defineNuxtConfig({
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
 
+  bridge: false, // Temporarily disable bridge integration
   ssr: true,
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
@@ -259,4 +261,4 @@ export default {
       ]
     }
   }
-}
+});
