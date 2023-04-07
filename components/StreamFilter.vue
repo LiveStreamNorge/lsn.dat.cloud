@@ -118,11 +118,6 @@ export default {
           image: "/platforms/kick.svg",
         },
         {
-          name: "Brime",
-          value: "brime",
-          image: "/platforms/brime.svg",
-        },
-        {
           name: "TikTok",
           value: "tiktok",
           image: "/platforms/tiktok.svg",
@@ -149,7 +144,6 @@ export default {
       } else {
         delete this.activeFilters["platform"];
       }
-      console.log(this.teams, this.platforms, this.activeFilters);
       // Emit a filter so that we can update the results
       this.$emit("filter-changed", this.activeFilters);
     },

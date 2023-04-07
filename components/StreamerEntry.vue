@@ -123,7 +123,6 @@ export default {
         ["trovo", "/trovo.png"],
         ["guac", "/guac.png"],
         ["kick", "/kick.svg"],
-        ["brime", "/brime.svg"],
         ["tiktok", "/tiktok.svg"],
         ["angelthump", "/angelthump.png"],
       ]);
@@ -138,7 +137,6 @@ export default {
         ["trovo", "trovo.live/"],
         ["guac", "guac.live/"],
         ["kick", "kick.com/"],
-        ["brime", "brime.tv/"],
         ["tiktok", "www.tiktok.com/@"],
         ["angelthump.com", "angelthump.com/"],
       ]);
