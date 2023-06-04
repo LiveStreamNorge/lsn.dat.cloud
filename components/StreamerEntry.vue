@@ -135,7 +135,7 @@ export default {
         ["youtube", "youtube.com/channel/"],
         ["robotstreamer", "robotstreamer.com/robot/"],
         ["trovo", "trovo.live/"],
-        ["guac", "guac.live/"],
+        ["guac", "guac.tv/"],
         ["kick", "kick.com/"],
         ["tiktok", "www.tiktok.com/@"],
         ["angelthump.com", "angelthump.com/"],
