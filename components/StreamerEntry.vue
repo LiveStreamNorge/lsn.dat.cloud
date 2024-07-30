@@ -138,7 +138,7 @@ export default {
         ["guac", "guac.tv/"],
         ["kick", "kick.com/"],
         ["tiktok", "www.tiktok.com/@"],
-        ["angelthump.com", "angelthump.com/"],
+        ["angelthump", "angelthump.com/"],
       ]);
       if (this.data.platform === "tiktok") {
         return (
